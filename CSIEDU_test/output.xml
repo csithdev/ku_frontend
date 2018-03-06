@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180306 23:27:12.236" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\CSI Education\Documents\CSIEDU_test\test01.robot" id="s1" name="Test01">
+<test id="s1-t1" name="Valid Login">
+<kw name="Open Browser To Login Page">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>1.5 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20180306 23:27:12.393" starttime="20180306 23:27:12.393"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${WEB URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180306 23:27:12.393" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:5000'.</msg>
+<status status="PASS" endtime="20180306 23:27:19.559" starttime="20180306 23:27:12.393"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>CSI</arg>
+</arguments>
+<msg timestamp="20180306 23:27:21.066" level="INFO">Page title is 'CSI'.</msg>
+<status status="PASS" endtime="20180306 23:27:21.066" starttime="20180306 23:27:19.559"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:21.066" starttime="20180306 23:27:12.392"></status>
+</kw>
+<kw name="Input Username">
+<arguments>
+<arg>demo</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180306 23:27:21.066" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" endtime="20180306 23:27:25.721" starttime="20180306 23:27:21.066"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:25.721" starttime="20180306 23:27:21.066"></status>
+</kw>
+<kw name="Input Password">
+<arguments>
+<arg>mode</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180306 23:27:25.721" level="INFO">Typing text 'mode' into text field 'password'.</msg>
+<status status="PASS" endtime="20180306 23:27:30.353" starttime="20180306 23:27:25.721"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:30.353" starttime="20180306 23:27:25.721"></status>
+</kw>
+<kw name="Submit Credentials">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>loginBtn</arg>
+</arguments>
+<msg timestamp="20180306 23:27:30.355" level="INFO">Clicking button 'loginBtn'.</msg>
+<status status="PASS" endtime="20180306 23:27:36.517" starttime="20180306 23:27:30.355"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:36.517" starttime="20180306 23:27:30.354"></status>
+</kw>
+<kw name="Welcome Page Should Be Open">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>tablePage</arg>
+</arguments>
+<status status="PASS" endtime="20180306 23:27:39.585" starttime="20180306 23:27:36.517"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:39.585" starttime="20180306 23:27:36.517"></status>
+</kw>
+<kw name="Go To Table Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>tablePage</arg>
+</arguments>
+<msg timestamp="20180306 23:27:39.585" level="INFO">Clicking element 'tablePage'.</msg>
+<status status="PASS" endtime="20180306 23:27:42.681" starttime="20180306 23:27:39.585"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:42.681" starttime="20180306 23:27:39.585"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180306 23:27:47.298" starttime="20180306 23:27:42.681"></status>
+</kw>
+<status status="PASS" endtime="20180306 23:27:47.299" critical="yes" starttime="20180306 23:27:12.392"></status>
+</test>
+<status status="PASS" endtime="20180306 23:27:47.300" starttime="20180306 23:27:12.251"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test01" pass="1">Test01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
