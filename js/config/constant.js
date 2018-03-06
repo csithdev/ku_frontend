@@ -1,0 +1,3 @@
+myApp.constant('constant', {
+
+});

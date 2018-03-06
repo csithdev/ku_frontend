@@ -1,0 +1,67 @@
+<!-- Main content -->
+<section class="content">
+    <h2>Without lib</h2>
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <pre><code>
+        &lt;table style="width:100%"&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Firstname&lt;/th&gt;
+                &lt;th&gt;Lastname&lt;/th&gt;
+                &lt;th&gt;Age&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Jill&lt;/td&gt;
+                &lt;td&gt;Smith&lt;/td&gt;
+                &lt;td&gt;50&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Eve&lt;/td&gt;
+                &lt;td&gt;Jackson&lt;/td&gt;
+                &lt;td&gt;94&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+
+    <h2>With lib</h2>
+    <table ng-table="tableParams" class="table" show-filter="true">
+        <tr ng-repeat="user in $data">
+            <td title="'Firstname'" filter="{ name: 'text'}" sortable="'name'">
+                {{user.name}}</td>
+            <td title="'Lastname'" filter="{ surname: 'text'}" sortable="'surname'">
+                {{user.surname}}</td>
+            <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+                {{user.age}}</td>
+        </tr>
+    </table>
+
+    <pre><code>
+        &lt;table ng-table="vm.tableParams" class="table" show-filter="true"&gt;
+            &lt;tr ng-repeat="user in $data"&gt;
+                &lt;td title="'Firstname'" filter="{ name: 'text'}" sortable="'name'"&gt;
+                    {{user.name}}&lt;/td&gt;
+                &lt;td title="'Lastname'" filter="{ surname: 'text'}" sortable="'surname'"&gt;
+                    {{user.surname}}&lt;/td&gt;
+                &lt;td title="'Age'" filter="{ age: 'number'}" sortable="'age'"&gt;
+                    {{user.age}}&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    </code></pre>
+</section>
+<!-- /.content -->

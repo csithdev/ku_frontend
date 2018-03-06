@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div ui-view="navigation"></div>
+    <div ui-view="menu"></div>
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                {{titlePage}}
+                <small>{{subtitlePage}}</small>
+            </h1>
+            <!--<div ncy-breadcrumb></div>-->
+        </section>
+        <div ui-view="content"></div>
+    </div>
+
+    <div ui-view="footer"></div>
+    <div class="control-sidebar-bg"></div>
+</div>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+    <head>
+        <!-- <base href="/"> -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSI</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.7 -->
+        <link rel="stylesheet" href="js/libs/external_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="js/libs/external_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="js/libs/external_components/Ionicons/css/ionicons.min.css">
+        <!-- Theme 2.4.2 style -->
+        <link rel="stylesheet" href="adminLTE/css/AdminLTE.css">
+        <!-- skin -->
+        <link rel="stylesheet" href="adminLTE/css/skins/skin-black.min.css">
+        <!-- other -->
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+
+    <body id="body" class="hold-transition skin-black sidebar-mini fixed login-bg">
+        <div ui-view></div>
+
+        <!-- jQuery 3 -->
+        <script src="js/libs/external_components/jquery3/dist/jquery.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="js/libs/external_components/jquery-ui/jquery-ui.min.js"></script>
+        <script src="js/libs/external_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <!-- angular core lib -->
+        <script src="js/libs/bower_components/angular/angular.min.js"></script>
+        <script src="js/libs/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="js/libs/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="js/libs/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="js/libs/bower_components/angular-i18n/angular-locale_th-th.js"></script>
+        <script src="js/libs/bower_components/ng-table/dist/ng-table.js"></script>
+        <!-- oclazy -->
+        <link id="ng_load_plugins_before" />
+
+        <script src="js/libs/external_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/libs/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <!-- angular App -->
+        <script src="js/config/app-state.js"></script>
+        <script src="js/config/constant.js"></script>
+        <script src="js/config/apiList.js"></script>
+        <script src="js/config/load.js"></script>
+        <script src="js/config/route.js"></script>
+        <script src="js/factory/utils.js"></script>
+
+        <!-- Core controller -->
+        <script src="js/core/layout/backendManagement/mainCtrl.js"></script>
+        <script src="js/core/navigation/navigationCtrl.js"></script>
+        <script src="js/core/menu/menuCtrl.js"></script>
+        <script src="js/core/footer/footerCtrl.js"></script>
+        <!-- other controller -->
+        <script src="js/controller/dashboard/dashboardCtrl.js"></script>
+        <script src="js/controller/paopao/paopaoCtrl.js"></script>
+        <script src="js/controller/login/login.js"></script>
+
+        <script src="adminLTE/js/app.min.js"></script>
+    </body>
+
+</html>

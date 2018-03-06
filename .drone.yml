@@ -1,0 +1,20 @@
+pipeline:
+  build:
+    image: plugins/ssh
+    host: 203.131.209.132
+    user: root
+    port: 22
+    script:
+      - cd /root/do_deploy/MEDWebFrontend
+      - git pull origin master
+      - bower install --allow-root
+      - jar -cvf TUMEDWeb.war *
+      - /opt/wildfly/bin/jboss-cli.sh --user=root --password=csi@dmin --connect controller=127.0.0.1 --command="undeploy TUMEDWeb.war"
+      - /opt/wildfly/bin/jboss-cli.sh --user=root --password=csi@dmin --connect controller=127.0.0.1 --command="deploy /root/do_deploy/MEDWebFrontend/TUMEDWeb.war"
+      - sh script_ftp
+  slack:
+    image: plugins/slack
+    webhook: https://hooks.slack.com/services/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
+    channel: deploy_service
+ 
+branches: master

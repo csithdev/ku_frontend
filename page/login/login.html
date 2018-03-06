@@ -1,0 +1,34 @@
+<div class="login-box">
+    <div class="login-box-body">
+        <div class="login-logo">
+            <b>Login</b>
+            <!--<img src="src/img/2d-vjr150px.png" class="logo" alt="">-->
+        </div>
+        <!--<p class="login-box-msg">Login</p>-->
+        <form name="loginForm" ng-submit="submitLogin()">
+            <div class="form-group has-feedback"
+                 ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.username.$pristine }">
+                <label>Username:</label>
+                <input type="text" class="form-control" name="username" id="username"
+                       ng-model="data.loginRq.name" placeholder="Username">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback"
+                 ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+                <label>password:</label>
+                <input type="password" class="form-control" name="password" id="password"
+                       ng-model="data.loginRq.password" placeholder="Password">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 mar-bottom">
+                    <button id="loginBtn" type="submit" class="btn bg-purple btn-block btn-flat">Login</button>
+                </div>
+            </div>
+        </form>
+
+        <!--<a class="mar-top" ui-sref="resetPassword()">ลืมรหัสผ่าน</a><br>-->
+
+    </div>
+    <!-- /.login-box-body -->
+</div>
