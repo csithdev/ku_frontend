@@ -10,8 +10,8 @@ ${password}    test
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
-    Input Username    demo
-    Input Password    mode
+    Input Username    ${username}
+    Input Password    ${password}
     Submit Credentials
     Welcome Page Should Be Open
     Go To Table Page
@@ -25,17 +25,19 @@ Open Browser To Login Page
 
 Input Username
     [Arguments]    ${username}
-    Input Text    username    ${username}
+    Wait Until Element Is Visible    id:username
+    Input Text    id:username    ${username}
 
 Input Password
     [Arguments]    ${password}
-    Input Text    password    ${password}
+    Wait Until Element Is Visible    xpath://*[@id="password"]
+    Input Text    xpath://*[@id="password"]    ${password}
 
 Submit Credentials
-    Click Button    loginBtn
+    Click Button    id:loginBtn
 
 Welcome Page Should Be Open
-    Wait Until Element Is Visible    tablePage
+    Wait Until Element Is Visible    id:tablePage
 
 Go To Table Page
-    Click Element    tablePage
+    Click Element    id:tablePage
