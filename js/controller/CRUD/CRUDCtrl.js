@@ -7,7 +7,7 @@ myApp.controller('CRUDCtrl', function($rootScope, $scope, $http, NgTableParams) 
             url: 'localhost:3000/api/v1/product'
         }).then(function successCallback(response) {
             console.log(response);
-            $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
+            $scope.tableParams = new NgTableParams({}, { dataset: response});
             alert("!!! Success !!!");
             // this callback will be called asynchronously
             // when the response is available
@@ -24,7 +24,7 @@ myApp.controller('CRUDCtrl', function($rootScope, $scope, $http, NgTableParams) 
             url: 'localhost:3000/api/v1/product/'+ id
         }).then(function successCallback(response) {
             console.log(response);
-            $scope.tableParams = new NgTableParams({}, { dataset: $scope.data});
+            $scope.tableParams = new NgTableParams({}, { dataset: response});
             alert("!!! Success !!!");
             // this callback will be called asynchronously
             // when the response is available
