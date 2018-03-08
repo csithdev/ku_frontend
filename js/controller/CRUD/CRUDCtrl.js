@@ -1,5 +1,5 @@
-myApp.controller('paopaoCtrl', function($rootScope, $scope, $http, NgTableParams) {
-    console.log('httpCtrl');
+myApp.controller('CRUDCtrl', function($rootScope, $scope, $http, NgTableParams) {
+    console.log('CRUDCtrl');
 
     $scope.getData1 =function () {
         $http({
