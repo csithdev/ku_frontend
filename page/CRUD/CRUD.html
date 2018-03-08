@@ -1,0 +1,106 @@
+<!-- Main content -->
+<section class="content">
+    <h2>GET all</h2>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-horizontal">
+                <button id="get1Btn" class="btn pull-right">Get Data</button>
+            </div>
+        </div>
+        <table ng-table="tableParams1" class="table" show-filter="true">
+            <tr ng-repeat="user in $data">
+                <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                    {{user.name}}</td>
+                <td title="'Description'" filter="{ descr: 'text'}" sortable="'descr'">
+                    {{user.descr}}</td>
+                <td title="'Price'" filter="{ price: 'number'}" sortable="'price'">
+                    {{user.price}}</td>
+                <td title="'Photo'" filter="{ photo: 'number'}">
+                    {{user.photo}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>GET with ID</h2>
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-6 text-right" for="name">Name</label>
+                    <input type="text" id="selectGetID" class="input-filter col-xs-6"  placeholder="ID" ng-model="selectID">
+                </div>
+            </div>
+        <button id="get2Btn" class="btn pull-right">Get Data with ID</button>
+        </div>
+        <table ng-table="tableParams2" class="table" show-filter="true">
+            <tr ng-repeat="user in $data">
+                <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                    {{user.name}}</td>
+                <td title="'Description'" filter="{ descr: 'text'}" sortable="'descr'">
+                    {{user.descr}}</td>
+                <td title="'Price'" filter="{ price: 'number'}" sortable="'price'">
+                    {{user.price}}</td>
+                <td title="'Photo'" filter="{ photo: 'number'}">
+                    {{user.photo}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Del</h2>
+    <div class="form-horizontal row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="name">Name</label>
+                <input type="text" id="selectDelID" class="input-filter col-xs-6"  placeholder="ID" ng-model="delID">
+            </div>
+            <button id="delBtn" class="btn pull-right">DELETE</button>
+        </div>
+    </div>
+
+    <h2>POST</h2>
+    <div class="row">
+        <div class="form-horizontal col-xs-6">
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="name">Name</label>
+                <input type="text" id="name" class="input-filter col-xs-6"  placeholder="Name" ng-model="item.name">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="descr">Description</label>
+                <input type="text" id="descr" class="input-filter col-xs-6" placeholder="Description" ng-model="item.descr">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="price">Price</label>
+                <input type="number" id="price" class="input-filter col-xs-6"  placeholder="$$$" ng-model="item.price">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="photo">Photo</label>
+                <input type="text" id="photo" class="input-filter col-xs-6"  placeholder="..."  ng-model="item.photo">
+            </div>
+            <button id="postBtn" class="btn pull-right">POST</button>
+        </div>
+    </div>
+
+    <h2>PUT</h2>
+    <div class="row">
+        <div class="form-horizontal col-xs-6">
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="name">Name</label>
+                <input type="text" id="namePut" class="input-filter col-xs-6"  placeholder="Name" ng-model="item.name">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="descr">Description</label>
+                <input type="text" id="descrPut" class="input-filter col-xs-6" placeholder="Description" ng-model="item.descr">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="price">Price</label>
+                <input type="number" id="pricePut" class="input-filter col-xs-6"  placeholder="$$$" ng-model="item.price">
+            </div>
+            <div class="form-group">
+                <label class="col-xs-6 text-right" for="photo">Photo</label>
+                <input type="text" id="photoPut" class="input-filter col-xs-6"  placeholder="..."  ng-model="item.photo">
+            </div>
+            <button id="putBtn" class="btn pull-right">PUT</button>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

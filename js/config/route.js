@@ -72,6 +72,17 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             },
             requiresLogin: true
         })
+        .state('csi.CRUD', {
+            url: '/CRUD',
+            role: 1,
+            views: {
+                'content': {
+                    templateUrl: "page/CRUD/CRUD.html",
+                    controller: 'CRUDCtrl'
+                }
+            },
+            requiresLogin: true
+        })
 
     ;
 
